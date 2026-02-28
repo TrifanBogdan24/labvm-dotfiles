@@ -174,4 +174,4 @@ fi
 cowsay -f cheese " " | lolcat
 
 # Shell prompt
-eval "$(oh-my-posh init bash --config $HOME/.cache/oh-my-posh/themes/wopian.omp.json)"
+eval "$(oh-my-posh init bash --config $HOME/.cache/oh-my-posh/themes/stelbent.minimal.omp.json)"

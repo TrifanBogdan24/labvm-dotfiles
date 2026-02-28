@@ -2,6 +2,12 @@
 # Installs the dotfiles for the current user.
 
 
+mkdir -p ~/.local/bin
+export PATH="$HOME/.local/bin:$PATH"
+
+# oh-my-posh (prompt)
+curl -s https://ohmyposh.dev/install.sh | bash -s -- -d $HOME/.local/bin
+
 # set to "1" for debug info
 DEBUG=${DEBUG:-}
 XDG_CONFIG_HOME=${XDG_CONFIG_HOME:-"$HOME/.config"}
@@ -33,8 +39,6 @@ for cmd in rsync wget git; do
 done
 
 # Prerequisites: download the fetch.sh utility
-mkdir -p ~/.local/bin
-export PATH="$HOME/.local/bin/:$PATH"
 if [[ " ${COMPONENTS[*]} " =~ " fetch " ]]; then
 	wget -O ~/.local/bin/fetch.sh "https://raw.githubusercontent.com/niflostancu/release-fetch-script/master/fetch.sh"
 	chmod +x ~/.local/bin/fetch.sh
