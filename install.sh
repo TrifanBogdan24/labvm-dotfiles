@@ -1,6 +1,7 @@
 #!/bin/bash
 # Installs the dotfiles for the current user.
 
+
 # set to "1" for debug info
 DEBUG=${DEBUG:-}
 XDG_CONFIG_HOME=${XDG_CONFIG_HOME:-"$HOME/.config"}

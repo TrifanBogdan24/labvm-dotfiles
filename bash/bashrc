@@ -170,3 +170,8 @@ fi
 
 [ ! -f ~/.config/bash/config.local.sh ] || source ~/.config/bash/config.local.sh 2>/dev/null
 
+# Banner
+cowsay -f cheese " " | lolcat
+
+# Shell prompt
+eval "$(oh-my-posh init bash --config $HOME/.cache/oh-my-posh/themes/wopian.omp.json)"

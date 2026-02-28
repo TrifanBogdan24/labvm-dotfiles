@@ -25,7 +25,9 @@ if [[ ! -f "$SPACESHIP_ROOT/spaceship.zsh" ]]; then
   mkdir -p "$SPACESHIP_ROOT"
 	git clone --depth=1 "https://github.com/spaceship-prompt/spaceship-prompt.git" "$SPACESHIP_ROOT"
 fi
-source "$SPACESHIP_ROOT/spaceship.zsh"
+
+# Not a spaceship fan, but keep it just in case
+# source "$SPACESHIP_ROOT/spaceship.zsh"
 
 # comon key binds
 bindkey "^[[1;5C" forward-word
@@ -72,4 +74,12 @@ setopt hist_verify
 export PATH="$HOME/.local/bin:$PATH"
 
 [ ! -f ~/.config/zsh/config.local.zsh ] || source ~/.config/zsh/config.local.zsh 2>/dev/null
+
+
+# Banner
+cowsay -f cheese " " | lolcat
+
+
+# Shell prompt
+eval "$(oh-my-posh init zsh --config $HOME/.cache/oh-my-posh/themes/wopian.omp.json)"
 

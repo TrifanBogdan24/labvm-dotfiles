@@ -13,6 +13,7 @@ git clone --depth 1 "$GIT_URL" "$TMP_DIR"
 
 (
 	cd "$TMP_DIR";
+	./install-tools.sh
 	./install.sh
 )
 
