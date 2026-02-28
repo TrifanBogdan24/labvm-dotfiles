@@ -170,8 +170,11 @@ fi
 
 [ ! -f ~/.config/bash/config.local.sh ] || source ~/.config/bash/config.local.sh 2>/dev/null
 
+# Prompt font colors
+fast-theme spa
+
 # Banner
 cowsay -f cheese " " | lolcat
 
 # Shell prompt
-eval "$(oh-my-posh init bash --config $HOME/.cache/oh-my-posh/themes/stelbent.minimal.omp.json)"
+eval "$(oh-my-posh init bash --config $HOME/.cache/oh-my-posh/themes/wopian.omp.json)"
